@@ -11,8 +11,8 @@ type Resolvers<T = any> = {
 };
 
 type ModalContextType<T = any> = {
-  showModal: (path: string) => Promise<T>;
-  resolveModal: (modalId: string, value?: T) => void;
+  showModal: <T>(path: string) => Promise<T>;
+  resolveModal: <T>(modalId: string, value?: T) => void;
   rejectModal: (modalId: string, reason?: any) => void;
 };
 
